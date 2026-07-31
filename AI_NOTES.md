@@ -46,6 +46,10 @@ application, and interacted with the API myself.
 - I added `pytest-cov` and configured the normal test command to require 100%
   line coverage for the small application package. I treat that as a guard
   against untested lines, not proof that the API has no bugs.
+- During final manual verification, I noticed that the base server URL had no
+  route even though `/docs` worked. I added a small `GET /` redirect to `/docs`
+  and a contract test, so opening the stated server address now leads directly
+  to the interactive documentation.
 
 ## AI suggestions I chose not to use
 

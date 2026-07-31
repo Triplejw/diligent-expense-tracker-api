@@ -53,7 +53,8 @@ activated shell or a globally installed Python package.
 .venv/bin/python -m uvicorn expense_tracker.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-The server starts at `http://127.0.0.1:8000`.
+The server starts at `http://127.0.0.1:8000`. Opening that base URL in a
+browser redirects to the interactive Swagger documentation.
 
 - Interactive Swagger UI: `http://127.0.0.1:8000/docs`
 - OpenAPI schema: `http://127.0.0.1:8000/openapi.json`
