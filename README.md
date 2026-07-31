@@ -64,6 +64,10 @@ The server starts at `http://127.0.0.1:8000`.
 .venv/bin/python -m pytest
 ```
 
+The command runs API-contract tests, focused unit tests, and a line-coverage
+report. It fails if the application code is below 100% line coverage. Coverage
+is a useful safety check, not a substitute for testing meaningful behaviour.
+
 ## API endpoints
 
 | Method | Path | Description | Success response |
@@ -160,7 +164,7 @@ To verify a submission from a clean checkout, clone the repository into a new
 directory and follow these sections in order:
 
 1. **Install dependencies**
-2. **Run the tests** — all 16 tests should pass
+2. **Run the tests** — the suite should pass and report 100% line coverage
 3. **Run the server**
 4. **End-to-end API demonstration** or test the same routes through Swagger
 
