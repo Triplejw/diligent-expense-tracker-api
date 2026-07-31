@@ -22,7 +22,7 @@ application, and interacted with the API myself.
 - I read through the generated project structure and code to understand the
   flow from request validation to storage and the HTTP response.
 - I ran the complete automated test suite with `python -m pytest`; it passed
-  with 31 tests and 100% line coverage across the application package.
+  with 32 tests and 100% line coverage across the application package.
 - I started the Uvicorn server locally and used FastAPI's Swagger UI to send
   real requests. I verified creation, listing, category filtering, the summary
   response, and deletion through the running API.
