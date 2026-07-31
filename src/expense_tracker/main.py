@@ -3,6 +3,7 @@
 from typing import Optional
 
 from fastapi import FastAPI, HTTPException, Query, Response, status
+from fastapi.responses import RedirectResponse
 
 from .models import (
     CategoryList,
@@ -19,6 +20,12 @@ app = FastAPI(
     description="A REST API for managing personal expenses.",
 )
 expense_store = ExpenseStore()
+
+
+@app.get("/", include_in_schema=False)
+def redirect_to_api_docs() -> RedirectResponse:
+    """Send a browser visiting the base URL to the interactive API docs."""
+    return RedirectResponse(url="/docs")
 
 
 @app.get("/health", response_model=HealthResponse, tags=["health"])
